@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Capriola', sans-serif;
 }
 
 /* Header - NavBar */
@@ -24,7 +25,8 @@ header .navbar button.logo {
     transition-duration: .3s;
     border: none;
     border-radius: 50%;
-    background: #ECAB9E;
+    background: rgba(127, 183, 126, 0.8);
+    box-shadow:  0px 0px 10px #333;
     margin: 10px;
     width: 50px;
     height: 50px;
@@ -36,7 +38,6 @@ header .navbar .logo .sign {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    font-family: 'Capriola', sans-serif;
     color: #FCF8E8;
     width: 100%;
 }
@@ -45,9 +46,8 @@ header .navbar .logo .text {
     position: absolute;
     right: 0%;
     opacity: 0;
-    font-family: 'Croissant One', sans-serif;
     font-size: 18px;
-    color: #333333;
+    color: #333;
     width: 0%;
 }
 
@@ -98,7 +98,6 @@ header .navbar .btn-list nav.sup ul li a {
     position: relative;
     text-decoration: none;
     font-size: 20px;
-    font-family: 'Capriola', sans-serif;
     color: #333333;
     margin: 0 20px;
 }
@@ -153,7 +152,6 @@ header .btn-list nav.inf .wrapper .icon {
 header .btn-list nav.inf .wrapper .icon .text {
     position: absolute;
     top: 0px;
-    font-family: 'Capriola', sans-serif;
     font-size: 12px;
     color: #333333;
     background: rgba(255, 255, 255, 0.5);
@@ -206,46 +204,55 @@ header .btn-list nav.inf .wrapper .icon:hover span {
 
 
 /* MAIN */
-main section.text {
-    display: grid;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Croissant One', sans-serif;
-    font-size: 60px;
-    background: linear-gradient(#abf4da 0%, #bde7b4 80%);
+main section.home {
+    display: flex;
+    background: linear-gradient(#51ab8b 0%, #bde7b4 90%);
     height: 100vh;
 }
 
-main .text .text1 {
-    position: absolute;
-    color: #333333;
-    top: 20%;
-    left: 10%;
+main .home .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+    width: 100%;
+    gap: 3%;
 }
 
-main .text .text2 {
-    position: absolute;
-    color: #333333;
-    top: 35%;
-    left: 20%;
+main .home .text .title {
+    display: grid;
+    width: 60%;
 }
 
-main .text .text3 {
-    position: absolute;
-    color: #2A7358;
-    top: 50%;
-    left: 30%;
+main .home .text .title p {
+    font-size: 40px;
+    color: #333;
 }
 
-main .text .sub {
-    position: absolute;
-    font-family: 'Capriola', sans-serif;
-    font-size: 25px;
+main .home .text .title b {
+    font-size: 45px;
+    color: #FCF8E8;
+    background: #77b580;
+    border-radius: 23px;
+    width: 100%;
     text-align: center;
-    color: #123930;
-    top: 75%;
-    margin: 0 15%;
+}
+
+main .home .text .img {
+    width: 30%;
+}
+
+main .home .text .img img {
+    max-width: 100%;
+    border-radius: 17%;
+}
+
+main .home .text .sub {
+    font-size: 22px;
+    text-align: center;
+    color: #333;
+    width: 80%;
 }
 
 /* ABOUT*/
@@ -254,7 +261,6 @@ main section.about {
     position: relative;
     justify-content: center;
     align-items: center;
-    font-family: 'Croissant One', sans-serif;
     font-size: 60px;
     background: linear-gradient(#BDE7B4 0%, #FCF8E8 30%);
     height: 100vh;
@@ -275,22 +281,10 @@ main .about .sub {
 }
 
 main .about .sub p {
-    font-family: 'Capriola', sans-serif;
     font-size: 20px;
     text-align: center;
     line-height: 150%;
     color: #2A7358;
 }
 
-main .about .img {
-    position: absolute;
-    right: 5%;
-    top: 25%;
-}
-
-main .about .img img {
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 50%;
-}
 
