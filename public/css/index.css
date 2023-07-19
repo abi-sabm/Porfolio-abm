@@ -26,7 +26,7 @@ header .navbar button.logo {
     border: none;
     border-radius: 50%;
     background: rgba(127, 183, 126, 0.8);
-    box-shadow:  0px 0px 10px #333;
+    box-shadow:  0px 0px 10px #abd6c6;
     margin: 10px;
     width: 50px;
     height: 50px;
@@ -37,8 +37,8 @@ header .navbar .logo .sign {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    color: #FCF8E8;
+    font-size: 25px;
+    color: #2A7358;
     width: 100%;
 }
 
@@ -47,16 +47,17 @@ header .navbar .logo .text {
     right: 0%;
     opacity: 0;
     font-size: 18px;
-    color: #333;
+    color: #FCF8E8;
     width: 0%;
 }
 
 header .navbar .logo:hover {
     border-radius: 25px;
-    width: 150px;
+    width: 130px;
 }
   
 header .navbar .logo:hover .sign {
+    color: #bde7b4;
     padding-left: 10px;
     width: 30%;
 }
@@ -82,6 +83,7 @@ header .navbar .btn-list nav.sup {
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.5);
+    box-shadow:  0px 0px 10px #abd6c6;
     border-radius: 50px 10px 50px 10px;
     margin: 10px;
     width: 450px;
@@ -200,91 +202,285 @@ header .btn-list nav.inf .wrapper .icon span i {
 
 header .btn-list nav.inf .wrapper .icon:hover span {
     background: #333;
+    scale: 1.1;
 }
 
 
-/* MAIN */
+/* MAIN - HOME */
 main section.home {
     display: flex;
-    background: linear-gradient(#51ab8b 0%, #bde7b4 90%);
-    height: 100vh;
+    background: linear-gradient(#6eccab 0%, #bde7b4 90%);
+    justify-content: center;
+    align-items: center;
 }
 
-main .home .text {
+main .home .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 70px;
-    width: 100%;
+    background: rgba(255, 255, 255, .3);
+    border-top: 2px solid rgba(209, 213, 219, 0.5);
+    border-left: 2px solid rgba(209, 213, 219, 0.5);
+    border-radius: 30px;
+    margin: 80px 0;
+    padding: 40px;
     gap: 3%;
+    width: 80%;
 }
 
-main .home .text .title {
+main .home .content .title {
     display: grid;
-    width: 60%;
+    margin: 30px 0;
+    width: 70%;
 }
 
-main .home .text .title p {
+main .home .content .title p {
     font-size: 40px;
     color: #333;
+    padding: 10px 0px;
 }
 
-main .home .text .title b {
+main .home .content .title b {
     font-size: 45px;
-    color: #FCF8E8;
-    background: #77b580;
-    border-radius: 23px;
-    width: 100%;
     text-align: center;
+    color: #FCF8E8;
+    background: #ECAB9E;
+    border-radius: 23px;
+    padding: 5px;
+    width: 90%;
 }
 
-main .home .text .img {
-    width: 30%;
+main .home .content .img {
+    width: 20%;
 }
 
-main .home .text .img img {
+main .home .content .img img {
     max-width: 100%;
     border-radius: 17%;
 }
 
-main .home .text .sub {
-    font-size: 22px;
-    text-align: center;
-    color: #333;
+main .home .content .text {
+    padding: 20px 0;
     width: 80%;
 }
 
+main .home .content .text p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 150%;
+    color: #333;
+}
+
+
 /* ABOUT*/
 main section.about {
-    display: grid;
-    position: relative;
+    display: flex;
+    background: linear-gradient(#BDE7B4 0%, #FCF8E8 40%);
+}
+
+main .about .content {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
-    background: linear-gradient(#BDE7B4 0%, #FCF8E8 30%);
-    height: 100vh;
+    margin: 70px 0;
+    width: 100%;
+    gap: 5%;
 }
 
-main .about .text1 {
-    position: absolute;
-    color: #333333;
-    top: 15%;
-    left: 5%;
+main .about .content .title {
+    width: 80%;
 }
 
-main .about .sub {
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    margin-right: 30%;
+main .about .content .title p {
+    font-size: 45px;
+    color: #333;
+    padding: 30px 0;
 }
 
-main .about .sub p {
+main .about .content .text {
+    width: 40%;
+}
+
+main .about .content .text p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 150%;
+    color: #333;
+}
+
+main .about .content .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+}
+
+main .about .content .skills span {
+    font-size: 30px;
+    text-align: center;
+    color: #FCF8E8;
+    background: #ECAB9E;
+    border-radius: 23px;
+    padding: 5px;
+    width: 80%;
+}
+
+main .about .content .skills .box {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: rgba(236, 171, 158, 0.5);
+    border: 1px solid #ECAB9E;
+    border-radius: 15%;
+    padding: 15px;
+    margin: 10px;
+    width: 80px;
+}
+
+main .about .content .skills .box i {
+    font-size: 40px;
+    text-align: center;
+    color: #333;
+}
+
+/* PROJECTS */
+main section.projects {
+    display: flex;
+    background: linear-gradient(#FCF8E8 70%, #BDE7B4 100%);
+}
+
+main .projects .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+    width: 100%;
+    gap: 5%;
+}
+
+main .projects .content .title {
+    width: 80%;
+}
+
+main .projects .content .title p {
+    font-size: 45px;
+    color: #333;
+    padding: 30px 0;
+}
+
+main .projects .content .box {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background:rgba(255, 255, 255, .3);
+    border-top: 2px solid rgba(209, 213, 219, 0.5);
+    border-left: 2px solid rgba(209, 213, 219, 0.5);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 15px;
+}
+
+main .projects .content .box article {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background: rgba(189, 231, 180, 0.5);
+    border: 1px solid #77b580;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+
+main .projects .content .box article div p {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+}
+
+main .projects .content .box article div img {
+    padding: 5px;
+    max-width: 200px;
+}
+
+main .projects .content .text {
+    padding: 30px 0;
+    width: 60%;
+}
+
+main .projects .content .text p {
     font-size: 20px;
     text-align: center;
     line-height: 150%;
     color: #2A7358;
 }
 
+/* CONTACT */
+main section.contact {
+    display: flex;
+    background: linear-gradient(#bde7b4 10%, #6eccab 100%);
+}
 
+main .contact .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+    width: 100%;
+    gap: 5%;
+}
+
+main .contact .content .title {
+    width: 80%;
+}
+
+main .contact .content .title p {
+    font-size: 45px;
+    color: #333;
+    padding: 30px 0;
+}
+
+main .contact .content .box {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    background:rgba(255, 255, 255, .3);
+    border-top: 2px solid rgba(209, 213, 219, 0.5);
+    border-left: 2px solid rgba(209, 213, 219, 0.5);
+    border-radius: 30px;
+    /* padding: 30px; */
+    margin: 40px;
+    width: 60%;
+}
+
+main .contact .content .box .wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 40%;
+}
+
+main .contact .content .box .wrapper i {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    color: #FCF8E8;
+    background: #ECAB9E;
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 40px;
+}
+
+main .contact .content .box .wrapper a {
+    text-decoration: none;
+}
+
+main .contact .content .box .wrapper a p {
+    font-size: 16px;
+    color: #333;
+}
