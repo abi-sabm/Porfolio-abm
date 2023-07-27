@@ -22,7 +22,6 @@ header .navbar button.logo {
     cursor: pointer;
     align-items: center;
     justify-content: flex-start;
-    transition-duration: .3s;
     border: none;
     border-radius: 50%;
     background: rgba(127, 183, 126, 0.8);
@@ -42,33 +41,15 @@ header .navbar .logo .sign {
     width: 100%;
 }
 
-header .navbar .logo .text {
-    position: absolute;
-    right: 0%;
-    opacity: 0;
-    font-size: 18px;
-    color: #FCF8E8;
-    width: 0%;
+ header .navbar .logo .text {
+    display: none;
 }
 
-header .navbar .logo:hover {
-    border-radius: 25px;
-    width: 130px;
-}
-  
 header .navbar .logo:hover .sign {
     color: #bde7b4;
-    padding-left: 10px;
-    width: 30%;
 }
 
-header .navbar .logo:hover .text {
-    opacity: 1;
-    padding-right: 10px;
-    transition: 0.8s;
-    width: 70%;
-}
-
+/*---------------------------------------------------------*/
 /* Nav central */
 header .navbar div.btn-list {
     display: flex;
@@ -82,11 +63,11 @@ header .navbar .btn-list nav.sup {
     z-index: 1;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(127, 183, 126, 0.8);
     box-shadow:  0px 0px 10px #abd6c6;
     border-radius: 50px 10px 50px 10px;
     margin: 10px;
-    width: 450px;
+    width: 300px;
     height: 50px;
 }
 
@@ -99,9 +80,9 @@ header .navbar .btn-list nav.sup ul li a {
     display: inline-block;
     position: relative;
     text-decoration: none;
-    font-size: 20px;
-    color: #333333;
-    margin: 0 20px;
+    font-size: 15px;
+    color: #FCF8E8;
+    margin: 0 10px;
 }
   
 header .navbar .btn-list nav.sup ul li a::after {
@@ -122,6 +103,7 @@ header .btn-list nav.sup ul li a:hover::after {
     transform-origin: bottom left;
 }
 
+/*---------------------------------------------------------*/
 /* Nav inferior */
 header .btn-list nav.inf {
     position: fixed;
@@ -205,7 +187,7 @@ header .btn-list nav.inf .wrapper .icon:hover span {
     scale: 1.1;
 }
 
-
+/*---------------------------------------------------------*/
 /* MAIN - HOME */
 main section.home {
     display: flex;
@@ -223,36 +205,38 @@ main .home .content {
     border-top: 2px solid rgba(209, 213, 219, 0.5);
     border-left: 2px solid rgba(209, 213, 219, 0.5);
     border-radius: 30px;
-    margin: 80px 0;
-    padding: 40px;
-    gap: 3%;
-    width: 80%;
+    margin: 100px 0;
+    padding: 10px;
+    width: 90%;
 }
 
 main .home .content .title {
     display: grid;
-    margin: 30px 0;
-    width: 70%;
+    margin: 15px 0;
+    width: 80%;
 }
 
 main .home .content .title p {
-    font-size: 40px;
+    font-size: 25px;
+    text-align: center;
     color: #333;
-    padding: 10px 0px;
+    padding: 5px 0px;
 }
 
 main .home .content .title b {
-    font-size: 45px;
+    font-size: 30px;
     text-align: center;
     color: #FCF8E8;
     background: #ECAB9E;
     border-radius: 23px;
-    padding: 5px;
-    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
 }
 
 main .home .content .img {
-    width: 20%;
+    margin-right: 5px;
+    width: 40%;
 }
 
 main .home .content .img img {
@@ -261,18 +245,17 @@ main .home .content .img img {
 }
 
 main .home .content .text {
-    padding: 20px 0;
-    width: 80%;
+    padding: 5px;
+    width: 55%;
 }
 
 main .home .content .text p {
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
-    line-height: 150%;
     color: #333;
 }
 
-
+/*---------------------------------------------------------*/
 /* ABOUT*/
 main section.about {
     display: flex;
@@ -286,65 +269,129 @@ main .about .content {
     align-items: center;
     margin: 70px 0;
     width: 100%;
-    gap: 5%;
 }
 
 main .about .content .title {
-    width: 80%;
+    padding: 10px;
+    width: 70%;
 }
 
 main .about .content .title p {
-    font-size: 45px;
-    color: #333;
-    padding: 30px 0;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+    color: #FCF8E8;
+    background: #2A7358;
+    padding: 10px 0;
 }
 
 main .about .content .text {
-    width: 40%;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .3);
+    border-right: 2px solid rgba(209, 213, 219, 0.5);
+    border-bottom: 2px solid rgba(209, 213, 219, 0.5);
+    padding: 30px;
+    margin-top: 30px;
+    width: 90%;
 }
 
 main .about .content .text p {
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     line-height: 150%;
     color: #333;
 }
 
-main .about .content .skills {
+/*---------------------------------------------------------*/
+/* SKILLS*/
+main section.skills {
+    display: flex;
+    background: #FCF8E8;
+}
+
+main .skills .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 30%;
+    align-items: center;
+    margin: 70px 0;
+    width: 100%;
 }
 
-main .about .content .skills span {
+
+main .skills .content .title {
+    padding: 10px;
+    width: 70%;
+}
+
+main .skills .content .title p {
     font-size: 30px;
     text-align: center;
+    border-radius: 15px;
     color: #FCF8E8;
     background: #ECAB9E;
-    border-radius: 23px;
-    padding: 5px;
-    width: 80%;
+    padding: 10px 0;
 }
 
-main .about .content .skills .box {
+main .skills .content .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    width: 90%;
+}
+
+main .skills .content .box .main-box {
     display: flex;
     align-content: center;
     justify-content: center;
+    position: relative;
+    cursor: pointer;
     background: rgba(236, 171, 158, 0.5);
     border: 1px solid #ECAB9E;
     border-radius: 15%;
     padding: 15px;
     margin: 10px;
-    width: 80px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 60px;
 }
 
-main .about .content .skills .box i {
-    font-size: 40px;
+main .skills .content .box .main-box .text {
+    position: absolute;
+    font-size: 10px;
+    text-align: center;
+    color: #333;
+    background: rgba(236, 171, 158, 0.9);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 100%;
+}
+
+main .skills .content .box .main-box:hover {
+    background-color: #333;
+}
+
+main .skills .content .box .main-box:hover .text {
+    opacity: 1;
+    pointer-events: auto;
+    scale: 1.2;
+}
+
+main .skills .content .box .main-box i {
+    font-size: 30px;
     text-align: center;
     color: #333;
 }
 
+main .skills .content .box .main-box:hover i {
+    color: #FCF8E8;
+} 
+
+/*---------------------------------------------------------*/
 /* PROJECTS */
 main section.projects {
     display: flex;
@@ -358,66 +405,97 @@ main .projects .content {
     align-items: center;
     margin: 70px 0;
     width: 100%;
-    gap: 5%;
 }
 
 main .projects .content .title {
-    width: 80%;
+    padding: 10px;
+    width: 70%;
 }
 
 main .projects .content .title p {
-    font-size: 45px;
-    color: #333;
-    padding: 30px 0;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+    color: #FCF8E8;
+    background: #2A7358;
+    padding: 10px 0;
 }
 
 main .projects .content .box {
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    background:rgba(255, 255, 255, .3);
-    border-top: 2px solid rgba(209, 213, 219, 0.5);
-    border-left: 2px solid rgba(209, 213, 219, 0.5);
-    border-radius: 30px;
-    padding: 20px;
-    margin: 15px;
+    margin-top: 15px;
 }
 
 main .projects .content .box article {
+    background: rgba(189, 231, 180, 0.5);
+    border: 1px solid rgb(119, 181, 128);
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px;
+    width: 250px;
+}
+
+main .projects .content .box article .main-box {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    background: rgba(189, 231, 180, 0.5);
-    border: 1px solid #77b580;
-    border-radius: 30px;
-    padding: 20px;
-    margin: 20px;
 }
 
-main .projects .content .box article div p {
+main .projects .content .box article .main-box .img {
+    overflow: hidden;
+    border-radius: 15px;
+    background: #2a7358;
+    margin: 10px;
+    padding: 10px;
+    height: 200px;
+    width: 225px;
+}
+
+main .projects .content .box article .main-box .img img {
+    border-radius: 15px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+main .projects .content .box article .main-box .sub {
     text-align: center;
-    font-size: 18px;
-    padding: 5px;
 }
 
-main .projects .content .box article div img {
-    padding: 5px;
-    max-width: 200px;
+main .projects .content .box article .main-box .sub b {
+    font-size: 18px;
+    color: #333;
+}
+
+main .projects .content .box article .main-box .sub p {
+    text-align: center;
+    font-size: 14px;
+    color: #2A7358;
+    padding: 10px;
 }
 
 main .projects .content .text {
-    padding: 30px 0;
-    width: 60%;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .3);
+    border-right: 2px solid rgba(209, 213, 219, 0.5);
+    border-bottom: 2px solid rgba(209, 213, 219, 0.5);
+    padding: 30px;
+    margin: 30px 0;
+    width: 90%;
 }
 
 main .projects .content .text p {
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
     line-height: 150%;
-    color: #2A7358;
+    color: #333;
 }
 
+/*---------------------------------------------------------*/
 /* CONTACT */
 main section.contact {
     display: flex;
@@ -435,34 +513,35 @@ main .contact .content {
 }
 
 main .contact .content .title {
-    width: 80%;
+    padding: 10px;
+    width: 70%;
 }
 
 main .contact .content .title p {
-    font-size: 45px;
-    color: #333;
-    padding: 30px 0;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+    color: #FCF8E8;
+    background: #ECAB9E;
+    padding: 10px 0;
 }
 
 main .contact .content .box {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     align-content: center;
     justify-content: space-evenly;
     background:rgba(255, 255, 255, .3);
     border-top: 2px solid rgba(209, 213, 219, 0.5);
     border-left: 2px solid rgba(209, 213, 219, 0.5);
     border-radius: 30px;
-    /* padding: 30px; */
-    margin: 40px;
-    width: 60%;
+    margin-top: 40px;
+    width: 80%;
 }
 
 main .contact .content .box .wrapper {
     display: flex;
     align-items: center;
     margin: 20px 0;
-    width: 40%;
 }
 
 main .contact .content .box .wrapper i {
@@ -473,6 +552,8 @@ main .contact .content .box .wrapper i {
     background: #ECAB9E;
     border-radius: 50%;
     margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
     width: 40px;
 }
 
@@ -481,6 +562,281 @@ main .contact .content .box .wrapper a {
 }
 
 main .contact .content .box .wrapper a p {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
+    transition: all 0.2s ease-in;
+}
+
+main .contact .content .box .wrapper:hover i {
+    color: #BDE7B4;
+    background: #2A7358;
+}
+
+main .contact .content .box .wrapper:hover a p {
+    color: #2A7358;
+}
+
+
+/* Media Queries */
+@media (min-width: 425px) {
+    header .navbar button.logo .sign {
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+}
+
+@media (max-width: 425px) {
+    header .navbar .logo .sign {
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    header .navbar .btn-list nav.sup {
+        width: 250px;
+        right: 2%;
+    }
+}
+
+@media (min-width: 600px) {
+    header .navbar .btn-list nav.sup {
+        width: 350px;
+    }
+
+    header .navbar .btn-list nav.sup ul li a {
+        font-size: 20px;
+    }
+
+/*---------------------------------------------------------*/
+/* HOME */
+    main .home .content {
+        width: 80%;
+    }
+
+    main .home .content .img {
+        width: 25%;
+    }
+
+    main .home .content .text p {
+        font-size: 16px;
+    }
+
+/*---------------------------------------------------------*/
+/* ABOUT */
+    main .about .content .title {
+        width: 50%;
+    }
+
+    main .about .content .text {
+        width: 80%;
+    }
+
+    main .about .content .text p {
+        font-size: 16px;
+    }
+
+/*---------------------------------------------------------*/
+/* SKILLS */
+    main .skills .content .title {
+        width: 50%;
+    }
+
+    main .skills .content .box {
+        width: 80%;
+    }
+
+/*---------------------------------------------------------*/
+/* PROJECTS */ 
+    main .projects .content .title {
+        width: 50%;
+    }
+
+    main .projects .content .box article .main-box .sub b {
+        font-size: 20px;
+    }
+
+    main .projects .content .box article .main-box .sub p {
+        font-size: 16px;
+    }
+
+    main .projects .content .text {
+        width: 80%;
+    }
+
+    main .projects .content .text p {
+        font-size: 16px;
+    }
+
+/*---------------------------------------------------------*/
+/* CONTACT */ 
+    main .contact .content .title {
+        width: 50%;
+    }
+
+    main .contact .content .box .wrapper a p {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (min-width: 769px) {
+    header .navbar .logo .text {
+        display: flex;
+        position: absolute;
+        right: 0%;
+        opacity: 0;
+        font-size: 18px;
+        color: #FCF8E8;
+        width: 0%;
+    }
+    
+    header .navbar .logo:hover {
+        border-radius: 25px;
+        width: 115px;
+    }
+      
+    header .navbar .logo:hover .sign {
+        color: #bde7b4;
+        padding-left: 10px;
+        width: 30%;
+    }
+    
+    header .navbar .logo:hover .text {
+        opacity: 1;
+        transition: 0.8s;
+        width: 65%;
+    }
+
+    header .navbar .btn-list nav.sup {
+        width: 450px;
+        right: auto;
+    }
+
+    header .navbar .btn-list nav.sup ul li a {
+        margin: 0 20px;
+    }
+
+/*---------------------------------------------------------*/
+/* HOME */
+    main .home .content {
+        padding: 20px;
+        width: 80%;
+    }
+    
+    main .home .content .title {
+        margin: 30px 0;
+        width: 70%;
+    }
+    
+    main .home .content .title p {
+        font-size: 35px;
+        text-align: left;
+        padding: 10px 0px;
+    }
+    
+    main .home .content .title b {
+        font-size: 38px;
+        padding: 5px;
+        width: 90%;
+    }
+    
+    main .home .content .img {
+        width: 25%;
+    }
+
+    main .home .content .text p {
+        font-size: 18px;
+    }
+
+
+/*---------------------------------------------------------*/ 
+/* ABOUT */
+    main .about .content .title {
+        width: 80%;
+    }
+
+    main .about .content .title p {
+        width: 40%;
+    }
+
+/*---------------------------------------------------------*/
+/* SKILLS*/
+main section.skills {
+    background: linear-gradient(#BDE7B4 0%, #FCF8E8 40%);
+}
+
+/*---------------------------------------------------------*/
+/* CONTACT */   
+    main .contact .content .box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        width: 60%;
+    }
+
+    main .contact .content .box .wrapper {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1024px) {
+/* HOME */
+    main .home .content {
+        margin: 100px 0;
+        padding: 40px;
+        gap: 3%;
+        width: 80%;
+    }
+    
+    main .home .content .title p {
+        font-size: 40px;
+    }
+    
+    main .home .content .title b {
+        font-size: 45px;
+    }
+    
+    main .home .content .img {
+        width: 20%;
+    }
+
+    main .home .content .text p {
+        font-size: 20px;
+    }
+
+/*---------------------------------------------------------*/
+/* ABOUT */
+    main .about .content .title p {
+        font-size: 45px;
+        padding: 30px 0;
+    }
+
+    main .about .content .text {
+        width: 40%;
+    }
+
+    main .about .content .text p {
+        font-size: 18px;
+    }
+
+    main .skills .content .skills span {
+        font-size: 30px;
+    }
+
+    main .skills .content .skills .box {
+        width: 80px;
+    }
+
+    main .skills .content .skills .box .text {
+        font-size: 13px;
+    }
+
+    main .skills .content .skills .box i {
+        font-size: 40px;
+    }
+
+/*---------------------------------------------------------*/
+/* PROJECTS */
+    main .projects .content .text p {
+        font-size: 18px;
+    }
+
 }
